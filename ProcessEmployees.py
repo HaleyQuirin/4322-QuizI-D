@@ -28,13 +28,14 @@ for line in read:
     FirstName = line[1]
     LastName = line[2]
     Salary = line[5]
-    # New_Salary = float(line[5]) * 1.10
+    # New_Salary = float(line[5]) * 1.1
     newfile = FirstName + " " + LastName + ", " + Salary
     outfile.write(newfile + "\n")
 
     # check if the employee fits the search criteria
 infile.close()
 outfile.close()
+
 print(EmployeeDict)
 print()
 print("=========================================")
