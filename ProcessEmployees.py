@@ -13,7 +13,7 @@ import csv
 # open the file
 infile = open("employee_data.csv", "r")
 outfile = open("newemployee_data.csv", "w")
-# outfile = csv.writer(write)
+
 EmployeeDict = {}
 # create an empty dictionary
 # next(infile)
