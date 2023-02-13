@@ -10,27 +10,34 @@ Iternate through the dictionary to print out their name and thier new salary (as
 
 import csv
 
-#open the file
+# open the file
+infile = open("employee_data.csv", "r")
+outfile = open("newemployee_data.csv", "w")
 
+# create an empty dictionary
 
+read = csv.reader(infile, delimiter=",")
 
+outfile.write("Employee Name, Salary\n")
 
-#create an empty dictionary
+# use a loop to iterate through the csv file
+for line in read:
+    FirstName = line[1]
+    LastName = line[2]
+    Salary = line[5]
+    newfile = FirstName + " " + LastName + ", " + Salary
+    outfile.write(newfile + "\n")
 
+    # check if the employee fits the search criteria
+infile.close()
+outfile.close()
 
-#use a loop to iterate through the csv file
-
-
-    #check if the employee fits the search criteria
-
-
-    
 
 print()
-print('=========================================')
+print("=========================================")
 print()
 
-#iternate through the dictionary and print out the key and value as per printout
+# iternate through the dictionary and print out the key and value as per printout
 
 
 
